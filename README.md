@@ -1,6 +1,18 @@
-🚀 Project Structure
+# 🚀 SpaceX Falcon 9 Launch EDA
 
-Create a folder named `spacex-eda-project` and organize it like this:
+Explore and analyze SpaceX Falcon 9 launch data to uncover patterns, visualize key metrics, and prepare the dataset for machine learning applications focused on landing prediction.
+
+![Landing Success Rate](images/landing_success_chart.png)
+
+---
+
+## 📖 Overview
+
+This repository contains an end-to-end Exploratory Data Analysis (EDA) workflow for SpaceX launches. You'll collect, clean, and explore real-world launch data, generate mission-critical insights, and prepare labels for future predictive modeling.
+
+---
+
+## 📁 Project Structure
 
 ```
 spacex-eda-project/
@@ -10,8 +22,8 @@ spacex-eda-project/
 │   └── dataset_part_2.csv
 │
 ├── notebooks/
-│   └── 1_data_collection.ipynb
-│   └── 2_eda_and_labeling.ipynb
+│   └── 1_data_collection.ipynb      # Gathers raw data from SpaceX API
+│   └── 2_eda_and_labeling.ipynb     # Cleans and analyzes launch data, creates label columns
 │
 ├── images/
 │   └── launch_site_distribution.png
@@ -24,82 +36,84 @@ spacex-eda-project/
 
 ---
 
-## 📘 README.md Template
+## ✅ Features
 
-```markdown
-# SpaceX Falcon 9 Launch EDA
+- Pulls launch data via the SpaceX API
+- Cleans and normalizes with pandas
+- Visualizes launch sites, payloads, and outcomes
+- Creates binary landing success labels for ML
+- Ready for extending to feature engineering and modeling
 
-This project performs Exploratory Data Analysis (EDA) on SpaceX Falcon 9 launch data to understand launch patterns and prepare training labels for machine learning.
+---
 
-## 📁 Project Structure
+## 🏃 Quickstart
 
-- `data/`: Contains raw and processed datasets
-- `notebooks/`: Jupyter notebooks for data collection and EDA
-- `images/`: Visualizations generated during analysis
-- `README.md`: Project overview and instructions
-- `requirements.txt`: Python dependencies
+<details>
+<summary>Get started in a few steps</summary>
 
-## 📊 Tasks Completed
+1. **Clone the repository**
+    ```bash
+    git clone https://github.com/tvankurt-cloud/spacex-eda-project.git
+    cd spacex-eda-project
+    ```
+2. **Install dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
+3. **Run notebooks**
+    Open `notebooks/` in Jupyter and execute each notebook step by step.
 
-- Collected launch data using the SpaceX API
-- Cleaned and normalized the dataset
-- Performed EDA on launch sites, payloads, and outcomes
-- Created binary labels for landing success
+</details>
+
+---
+
+## 📊 Notebooks
+
+- **1_data_collection.ipynb**  
+  *Fetches and saves SpaceX launch data from API as CSVs*
+
+- **2_eda_and_labeling.ipynb**  
+  *Explores key metrics (launch site, payload, outcomes) and creates label columns for ML*
+
+Outputs: See visualizations in the `images/` folder (e.g. ![Launch Site Distribution](images/launch_site_distribution.png)).
+
+---
 
 ## 🧪 Next Steps
 
 - Feature engineering
 - Model training and evaluation
 
-## 🧰 Requirements
+---
 
+## 💾 Requirements
+
+- Python >=3.8
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- requests
+
+Install all dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
+---
+
 ## 👤 Author
 
 GitHub: [tvankurt-cloud](https://github.com/tvankurt-cloud)
-```
 
 ---
 
-## 📦 requirements.txt
+## 📄 License
 
-```txt
-pandas
-numpy
-matplotlib
-seaborn
-requests
-```
+MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
-## 🛠️ GitHub Setup Steps
+## 🤝 Contributing
 
-1. **Create a new repo** on GitHub:  
-   Name it `spacex-eda-project`
-
-2. **Clone it locally**:
-   ```bash
-   git clone https://github.com/tvankurt-cloud/spacex-eda-project.git
-   cd spacex-eda-project
-   ```
-
-3. **Add your files**:
-   ```bash
-   mkdir data notebooks images
-   # Move your CSVs and notebooks into the right folders
-   ```
-
-4. **Commit and push**:
-   ```bash
-   git add .
-   git commit -m "Initial commit: SpaceX EDA project setup"
-   git push origin main
-   ```
-
----
-
-
+Contributions and suggestions are welcome! Please open an issue or submit a pull request.
