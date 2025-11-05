@@ -102,4 +102,4 @@ requests
 
 ---
 
-I can help you write your first commit message, generate visuals for your README, or prep the next notebook for model training. Just say the word.
+
